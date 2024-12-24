@@ -80,3 +80,10 @@ C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\obj\
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\obj\Debug\BookLibarySystem.csproj.CopyComplete
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\obj\Debug\BookLibarySystem.dll
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\obj\Debug\BookLibarySystem.pdb
+C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Net.Http.Formatting.dll
+C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Web.Http.dll
+C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Web.Http.WebHost.dll
+C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Net.Http.Formatting.xml
+C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Web.Http.xml
+C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Web.Http.WebHost.xml
+C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\obj\Debug\BookLibarySystem.csprojAssemblyReference.cache

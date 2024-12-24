@@ -12,7 +12,7 @@ namespace BookLibarySystem
             bundles.Add(new Bundle("~/bundles/jquery").Include(
                 "~/Scripts/vendor/jquery.min.js"));
             bundles.Add(new Bundle("~/bundles/bootstrap").Include(
-                "~/Scripts/vendor/bootstrap.js"));
+                "~/Scripts/vendor/bootstrap.min.js"));
             bundles.Add(new ScriptBundle("~/bundles/js").Include(
                  "~/Scripts/vendor/modernizr-3.5.0.min.js",
                  "~/Scripts/popper.min.js",
