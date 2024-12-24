@@ -143,9 +143,11 @@
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\CartItem.cs" />
+    <Compile Include="Models\Enums\Category.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderInfo.cs" />
+    <Compile Include="Models\Views\BooksViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -188,18 +190,18 @@
     <Content Include="Content\images\bg\1.jpg" />
     <Content Include="Content\images\bg\2.jpg" />
     <Content Include="Content\images\bg\7.jpg" />
-    <Content Include="Content\images\books\1.jpg" />
-    <Content Include="Content\images\books\10.jpg" />
-    <Content Include="Content\images\books\11.jpg" />
-    <Content Include="Content\images\books\12.jpg" />
-    <Content Include="Content\images\books\2.jpg" />
-    <Content Include="Content\images\books\3.jpg" />
-    <Content Include="Content\images\books\4.jpg" />
-    <Content Include="Content\images\books\5.jpg" />
-    <Content Include="Content\images\books\6.jpg" />
-    <Content Include="Content\images\books\7.jpg" />
-    <Content Include="Content\images\books\8.jpg" />
-    <Content Include="Content\images\books\9.jpg" />
+    <Content Include="Content\images\books\pride_and_prejudice1.jpg" />
+    <Content Include="Content\images\books\tom_sawyer2.jpg" />
+    <Content Include="Content\images\books\anna_karenina1.jpg" />
+    <Content Include="Content\images\books\anna_karenina2.jpg" />
+    <Content Include="Content\images\books\pride_and_prejudice2.jpg" />
+    <Content Include="Content\images\books\huck_finn1.jpg" />
+    <Content Include="Content\images\books\huck_finn2.jpg" />
+    <Content Include="Content\images\books\war_and_peace1.jpg" />
+    <Content Include="Content\images\books\war_and_peace2.jpg" />
+    <Content Include="Content\images\books\emma1.jpg" />
+    <Content Include="Content\images\books\emma2.jpg" />
+    <Content Include="Content\images\books\tom_sawyer1.jpg" />
     <Content Include="Content\images\icons\button-wishlist.png" />
     <Content Include="Content\images\icons\button-wishlist_white.png" />
     <Content Include="Content\images\icons\cart.png" />
@@ -251,6 +253,7 @@
   <ItemGroup>
     <Content Include="App_Browsers\qt.browser" />
     <None Include="packages.config" />
+    <Content Include="Views\Components\_SingleBook.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

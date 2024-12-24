@@ -1,4 +1,4 @@
-﻿namespace EBookStore.Models
+﻿namespace BookLibarySystem.Models
 {
     public class Admin
     {

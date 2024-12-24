@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity;
 
-namespace EBookStore.Models
+namespace BookLibarySystem.Models
 {
     public class ApplicationDbContext : DbContext
     {

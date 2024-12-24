@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EBookStore.Models
+namespace BookLibarySystem.Models
 {
     public class Order
     {

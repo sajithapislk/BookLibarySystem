@@ -1,5 +1,3 @@
-C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\obj\Debug\BookLibarySystem.csproj.CoreCompileInputs.cache
-C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\obj\Debug\BookLibarySystem.csprojAssemblyReference.cache
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\BookLibarySystem.dll.config
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\BookLibarySystem.dll
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\BookLibarySystem.pdb
@@ -78,6 +76,7 @@ C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\Newtonsoft.Json.xml
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\Antlr3.Runtime.pdb
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\obj\Debug\BookLibarySystem.csproj.CoreCompileInputs.cache
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\obj\Debug\BookLibarySystem.csproj.CopyComplete
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\obj\Debug\BookLibarySystem.dll
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\obj\Debug\BookLibarySystem.pdb

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace EBookStore.Models
+namespace BookLibarySystem.Models
 {
     public class Author
     {
