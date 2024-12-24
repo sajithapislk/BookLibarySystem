@@ -4,10 +4,10 @@
     <div class="single__product__inner">
         <div class="product product__style--3">
             <div class="product__thumb">
-                <a class="first__img" href="single-product.html">
+                <a class="first__img" href="@Url.Action("Show", "Book", new { id = Model.BookId })">
                     <img src="@Url.Content($"~/Content/images/books/{Model.Image1}")" alt="product image">
                 </a>
-                <a class="second__img animation1" href="single-product.html">
+                <a class="second__img animation1" href="@Url.Action("Show", "Book", new { id = Model.BookId })">
                     <img src="@Url.Content($"~/Content/images/books/{Model.Image2}")" alt="product image">
                 </a>
                 <div class="hot__box">
@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="product__content content--center content--center">
-                <h4><a href="single-product.html">@Model.Title</a></h4>
+                <h4><a href="@Url.Action("Show", "Books", new { id = Model.BookId })">@Model.Title</a></h4>
                 <ul class="price d-flex">
                     <li>@String.Format("{0:C}", Model.Price)</li>
                     <li class="old_price">@String.Format("{0:C}", Model.Price+10)</li>
