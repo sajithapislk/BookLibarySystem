@@ -1,3 +1,5 @@
+C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\obj\Debug\BookLibarySystem.csproj.CoreCompileInputs.cache
+C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\obj\Debug\BookLibarySystem.csprojAssemblyReference.cache
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\BookLibarySystem.dll.config
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\BookLibarySystem.dll
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\BookLibarySystem.pdb
@@ -48,9 +50,13 @@ C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\roslyn\VBCSCompiler.exe
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\Antlr3.Runtime.dll
+C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\EntityFramework.dll
+C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\EntityFramework.SqlServer.dll
+C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\Microsoft.AspNet.Identity.Core.dll
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\Newtonsoft.Json.dll
+C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\Rotativa.dll
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Web.Helpers.dll
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Web.Mvc.dll
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Web.Optimization.dll
@@ -59,6 +65,9 @@ C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Web.WebPages.dll
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Web.WebPages.Razor.dll
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\WebGrease.dll
+C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\EntityFramework.xml
+C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\EntityFramework.SqlServer.xml
+C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\Microsoft.AspNet.Identity.Core.xml
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Web.Helpers.xml
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Web.Mvc.xml
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Web.Optimization.xml
@@ -69,8 +78,6 @@ C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\Newtonsoft.Json.xml
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\Antlr3.Runtime.pdb
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\obj\Debug\BookLibarySystem.csprojAssemblyReference.cache
-C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\obj\Debug\BookLibarySystem.csproj.CoreCompileInputs.cache
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\obj\Debug\BookLibarySystem.csproj.CopyComplete
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\obj\Debug\BookLibarySystem.dll
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\obj\Debug\BookLibarySystem.pdb
