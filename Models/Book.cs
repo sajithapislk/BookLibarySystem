@@ -1,5 +1,6 @@
 ﻿using BookLibarySystem.Models.Enums;
 using System;
+using System.Collections.Generic;
 
 namespace BookLibarySystem.Models
 {
@@ -17,5 +18,6 @@ namespace BookLibarySystem.Models
         public Category Category { get; set; }
         // Navigation properties
         public virtual Author Author { get; set; }
+        public virtual ICollection<OrderInfo> OrderInfos { get; set; }
     }
 }

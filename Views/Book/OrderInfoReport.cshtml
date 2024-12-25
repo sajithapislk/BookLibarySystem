@@ -1,0 +1,28 @@
+﻿@model IEnumerable<BookLibarySystem.Models.Book>
+@{
+    Layout = null;
+}
+<h2>Book Report</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>ISBN</th>
+            <th>Price</th>
+            <th>Qty</th>
+        </tr>
+    </thead>
+    <tbody>
+        @*@foreach (var book in Model)
+        {
+        <tr>
+            <td>@book.Title</td>
+            <td>@book.Author.FirstName</td>
+            <td>@book.ISBN</td>
+            <td>@book.Price</td>
+            <td>@book.Qty</td>
+        </tr>
+        }*@
+    </tbody>
+</table>

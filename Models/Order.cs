@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace BookLibarySystem.Models
 {
@@ -12,6 +13,6 @@ namespace BookLibarySystem.Models
 
         // Navigation properties
         public virtual Customer Customer { get; set; }
-        public virtual OrderInfo OrderInfo { get; set; }
+        public virtual ICollection<OrderInfo> OrderInfo { get; set; }
     }
 }

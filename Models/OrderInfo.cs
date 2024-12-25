@@ -11,5 +11,6 @@ namespace BookLibarySystem.Models
 
         // Navigation properties
         public virtual Book Book { get; set; }
+        public virtual Order Order { get; set; }
     }
 }

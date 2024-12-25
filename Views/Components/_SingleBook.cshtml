@@ -24,9 +24,11 @@
                     <div class="actions_inner">
                         <ul class="add_to_links">
                             <li>
-                                <a class="cart" href="cart.html">
-                                    <i class="bi bi-shopping-bag4"></i>
-                                </a>
+                                @using (Html.BeginForm("AddToCart", "Cart", FormMethod.Post))
+                                {
+                                    @Html.Hidden("id", Model.BookId)
+                                    <button type="submit" class="cart"><i class="bi bi-shopping-bag4"></i></button>
+                                }
                             </li>
                             <li>
                                 <a class="wishlist" href="wishlist.html">
