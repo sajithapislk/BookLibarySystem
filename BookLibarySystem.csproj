@@ -267,7 +267,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Order\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Browsers\qt.browser" />
@@ -278,6 +277,7 @@
     <Content Include="Views\Cart\CheckoutConfirmation.cshtml" />
     <Content Include="Views\Book\OrderInfoReport.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Order\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -7,10 +7,17 @@ using System.Web.Mvc;
 
 namespace BookLibarySystem.Controllers
 {
+    [Authorize]
     public class OrderController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+
         // GET: Order
+        public ActionResult Index()
+        {
+            var orders = db.Orders.ToList();
+            return View(orders);
+        }
         public ActionResult OrderInfoReport(int orderId)
         {
             var order = db.Orders.Include("OrderInfo.Book").SingleOrDefault(o => o.OrderId == orderId) ;
