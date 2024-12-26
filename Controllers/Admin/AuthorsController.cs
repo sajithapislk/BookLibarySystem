@@ -10,114 +10,109 @@ using BookLibarySystem.Models;
 
 namespace BookLibarySystem.Controllers.Admin
 {
-    public class BooksController : Controller
+    public class AuthorsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Books
+        // GET: Authors
         public ActionResult Index()
         {
-            var books = db.Books.Include(b => b.Author);
-            return View("~/Views/Admin/Books/Index.cshtml",books.ToList());
+            return View("~/Views/Admin/Authors/Index.cshtml",db.Authors.ToList());
         }
 
-        // GET: Books/Details/5
+        // GET: Authors/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Book book = db.Books.Find(id);
-            if (book == null)
+            Author author = db.Authors.Find(id);
+            if (author == null)
             {
                 return HttpNotFound();
             }
-            return View("~/Views/Admin/Books/Details.cshtml", book);
+            return View("~/Views/Admin/Authors/Details.cshtml", author);
         }
 
-        // GET: Books/Create
+        // GET: Authors/Create
         public ActionResult Create()
         {
-            ViewBag.AuthorId = new SelectList(db.Authors, "AuthorId", "FirstName");
-            return View("~/Views/Admin/Books/Create.cshtml");
+            return View("~/Views/Admin/Authors/Create.cshtml");
         }
 
-        // POST: Books/Create
+        // POST: Authors/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "BookId,AuthorId,Title,Image1,Image2,ISBN,Price,Description,CreatedAt,Category")] Book book)
+        public ActionResult Create([Bind(Include = "AuthorId,FirstName,LastName,Image")] Author author)
         {
             if (ModelState.IsValid)
             {
-                db.Books.Add(book);
+                db.Authors.Add(author);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.AuthorId = new SelectList(db.Authors, "AuthorId", "FirstName", book.AuthorId);
-            return View("~/Views/Admin/Books/Create.cshtml", book);
+            return View("~/Views/Admin/Authors/Create.cshtml", author);
         }
 
-        // GET: Books/Edit/5
+        // GET: Authors/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Book book = db.Books.Find(id);
-            if (book == null)
+            Author author = db.Authors.Find(id);
+            if (author == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.AuthorId = new SelectList(db.Authors, "AuthorId", "FirstName", book.AuthorId);
-            return View("~/Views/Admin/Books/Edit.cshtml", book);
+            return View("~/Views/Admin/Authors/Edit.cshtml", author);
         }
 
-        // POST: Books/Edit/5
+        // POST: Authors/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "BookId,AuthorId,Title,Image1,Image2,ISBN,Price,Description,CreatedAt,Category")] Book book)
+        public ActionResult Edit([Bind(Include = "AuthorId,FirstName,LastName,Image")] Author author)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(book).State = EntityState.Modified;
+                db.Entry(author).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("~/Views/Admin/Authors/Index.cshtml");
             }
-            ViewBag.AuthorId = new SelectList(db.Authors, "AuthorId", "FirstName", book.AuthorId);
-            return View("~/Views/Admin/Books/Edit.cshtml", book);
+            return View(author);
         }
 
-        // GET: Books/Delete/5
+        // GET: Authors/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Book book = db.Books.Find(id);
-            if (book == null)
+            Author author = db.Authors.Find(id);
+            if (author == null)
             {
                 return HttpNotFound();
             }
-            return View("~/Views/Admin/Books/Delete.cshtml", book);
+            return View("~/Views/Admin/Authors/Delete.cshtml", author);
         }
 
-        // POST: Books/Delete/5
+        // POST: Authors/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Book book = db.Books.Find(id);
-            db.Books.Remove(book);
+            Author author = db.Authors.Find(id);
+            db.Authors.Remove(author);
             db.SaveChanges();
-            return RedirectToAction("~/Views/Admin/Books/Index.cshtml");
+            return RedirectToAction("~/Views/Admin/Authors/Index.cshtml");
         }
 
         protected override void Dispose(bool disposing)

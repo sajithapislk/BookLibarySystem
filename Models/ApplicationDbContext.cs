@@ -36,5 +36,7 @@ namespace BookLibarySystem.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<BookLibarySystem.Models.Feedback> Feedbacks { get; set; }
     }
 }

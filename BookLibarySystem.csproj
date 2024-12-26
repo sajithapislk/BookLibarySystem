@@ -144,8 +144,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Admin\AuthorsController.cs" />
     <Compile Include="Controllers\Admin\BooksController.cs" />
+    <Compile Include="Controllers\Admin\CustomersController.cs" />
+    <Compile Include="Controllers\Admin\FeedbacksController.cs" />
     <Compile Include="Controllers\Admin\HomeController.cs" />
+    <Compile Include="Controllers\Admin\OrdersController.cs" />
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -298,6 +302,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Author\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Browsers\qt.browser" />
@@ -313,6 +318,27 @@
     <Content Include="Views\Admin\Home\Index.cshtml">
       <BrowseToURL>~/Admin/Home/Index</BrowseToURL>
     </Content>
+    <Content Include="Views\Admin\Authors\Create.cshtml" />
+    <Content Include="Views\Admin\Authors\Delete.cshtml" />
+    <Content Include="Views\Admin\Authors\Details.cshtml" />
+    <Content Include="Views\Admin\Authors\Edit.cshtml" />
+    <Content Include="Views\Admin\Books\Create.cshtml" />
+    <Content Include="Views\Admin\Books\Delete.cshtml" />
+    <Content Include="Views\Admin\Books\Details.cshtml" />
+    <Content Include="Views\Admin\Books\Edit.cshtml" />
+    <Content Include="Views\Admin\Books\Index.cshtml" />
+    <Content Include="Views\Admin\Customers\Create.cshtml" />
+    <Content Include="Views\Admin\Customers\Delete.cshtml" />
+    <Content Include="Views\Admin\Customers\Details.cshtml" />
+    <Content Include="Views\Admin\Customers\Edit.cshtml" />
+    <Content Include="Views\Admin\Customers\Index.cshtml" />
+    <Content Include="Views\Admin\Orders\Delete.cshtml" />
+    <Content Include="Views\Admin\Orders\Details.cshtml" />
+    <Content Include="Views\Admin\Orders\Edit.cshtml" />
+    <Content Include="Views\Admin\Orders\Index.cshtml" />
+    <Content Include="Views\Admin\Feedbacks\Details.cshtml" />
+    <Content Include="Views\Admin\Feedbacks\Index.cshtml" />
+    <Content Include="Views\Admin\Authors\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
