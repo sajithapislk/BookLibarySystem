@@ -55,7 +55,10 @@ C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\Newtonsoft.Json.dll
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\Rotativa.dll
+C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Net.Http.Formatting.dll
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Web.Helpers.dll
+C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Web.Http.dll
+C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Web.Http.WebHost.dll
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Web.Mvc.dll
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Web.Optimization.dll
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Web.Razor.dll
@@ -66,6 +69,9 @@ C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\EntityFramework.xml
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\EntityFramework.SqlServer.xml
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Net.Http.Formatting.xml
+C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Web.Http.xml
+C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Web.Http.WebHost.xml
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Web.Helpers.xml
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Web.Mvc.xml
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Web.Optimization.xml
@@ -80,10 +86,4 @@ C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\obj\
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\obj\Debug\BookLibarySystem.csproj.CopyComplete
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\obj\Debug\BookLibarySystem.dll
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\obj\Debug\BookLibarySystem.pdb
-C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Net.Http.Formatting.dll
-C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Web.Http.dll
-C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Web.Http.WebHost.dll
-C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Net.Http.Formatting.xml
-C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Web.Http.xml
-C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\bin\System.Web.Http.WebHost.xml
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\obj\Debug\BookLibarySystem.csprojAssemblyReference.cache

@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Lava Material - Web Application and Website Multipurpose Admin Panel Template</title>
+    <!--== META TAGS ==-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--== FAV ICON ==-->
+    <link rel="shortcut icon" href="images/fav.ico">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Quicksand:300,400,500" rel="stylesheet">
+
+
+    @Styles.Render("~/Content/admin-css")
+    @RenderSection("Styles", required: false)
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!--== MAIN CONTRAINER ==-->
+    <div class="container-fluid sb1 ">
+        <div class="row">
+            <!--== LOGO ==-->
+            <div class="col-md-2 col-sm-3 col-xs-6 sb1-1">
+                <a href="#" class="btn-close-menu"><i class="fa fa-times" aria-hidden="true"></i></a>
+                <a href="#" class="atab-menu"><i class="fa fa-bars tab-menu" aria-hidden="true"></i></a>
+                <a href="index.html" class="logo">
+                    <img src="@Url.Content("~/Content/admin-images/logo1.png")" alt="" />
+                </a>
+            </div>
+            <div class="col-md-8 col-sm-6 mob-hide"></div>
+            <!--== MY ACCCOUNT ==-->
+            <div class="col-md-2 col-sm-3 col-xs-6 ">
+                <!-- Dropdown Trigger -->
+                <a class='waves-effect dropdown-button top-user-pro' href='#' data-activates='top-menu'>
+                    <img src="@Url.Content("~/Content/admin-images/user/6.png")" alt="" />My Account <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </a>
+
+                <!-- Dropdown Structure -->
+                <ul id='top-menu' class='dropdown-content top-menu-sty'>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#" class="ho-dr-con-last waves-effect">
+                            <i class="fa fa-sign-in" aria-hidden="true"></i>
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--== BODY CONTNAINER ==-->
+    <div class="container-fluid sb2">
+        <div class="row">
+            <div class="sb2-1">
+
+                <!--== LEFT MENU ==-->
+                <div class="sb2-13">
+                    <ul class="collapsible" data-collapsible="accordion">
+                        <li class="active">
+                            <a href="javascript:void(0)" class="active">
+                                <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="collapsible-header ">
+                                <i class="fa fa-list-ul"
+                                   aria-hidden="true"></i> Author
+                            </a>
+                            <div class="collapsible-body left-sub-menu">
+                                <ul>
+                                    <li>
+                                        <a href="listing-all.html">All Author</a>
+                                    </li>
+                                    <li>
+                                        <a href="listing-add.html">Add New Author</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="collapsible-header">
+                                <i class="fa fa-user"
+                                   aria-hidden="true"></i> Customers
+                            </a>
+                            <div class="collapsible-body left-sub-menu">
+                                <ul>
+                                    <li>
+                                        <a href="user-all.html">All Customer</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="collapsible-header">
+                                <i class="fa fa-umbrella"
+                                   aria-hidden="true"></i>Book
+                            </a>
+                            <div class="collapsible-body left-sub-menu">
+                                <ul>
+                                    <li>
+                                        <a href="package-all.html">All Book</a>
+                                    </li>
+                                    <li>
+                                        <a href="package-add.html">Add New Book</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="collapsible-header">
+                                <i class="fa fa-h-square"
+                                   aria-hidden="true"></i> Order
+                            </a>
+                            <div class="collapsible-body left-sub-menu">
+                                <ul>
+                                    <li>
+                                        <a href="hotel-all.html">All Order</a>
+                                    </li>
+                                    <li>
+                                        <a href="hotel-add.html">Pending Order</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <!--== BODY INNER CONTAINER ==-->
+            <div class="sb2-2">
+                @RenderBody()
+            </div>
+
+        </div>
+    </div>
+
+    <!--== BOTTOM FLOAT ICON ==-->
+    <section>
+        <div class="fixed-action-btn vertical">
+            <a class="btn-floating btn-large red pulse">
+                <i class="large material-icons">mode_edit</i>
+            </a>
+            <ul>
+                <li>
+                    <a class="btn-floating red"><i class="material-icons">insert_chart</i></a>
+                </li>
+                <li>
+                    <a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a>
+                </li>
+                <li>
+                    <a class="btn-floating green"><i class="material-icons">publish</i></a>
+                </li>
+                <li>
+                    <a class="btn-floating blue"><i class="material-icons">attach_file</i></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!--======== SCRIPT FILES =========-->
+     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/admin-js")
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>

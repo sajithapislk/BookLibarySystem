@@ -20,6 +20,11 @@ namespace BookLibarySystem
                  "~/Scripts/active.js"
              ));
 
+            bundles.Add(new ScriptBundle("~/bundles/admin-js").Include(
+                "~/Scripts/admin/materialize.min.js",
+                "~/Scripts/admin/custom.js"
+            ));
+
             // Bundle for CSS
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/css/bootstrap.min.css",
@@ -28,6 +33,14 @@ namespace BookLibarySystem
                 ));
             bundles.Add(new Bundle("~/Content/custom-css").Include(
                 "~/Content/css/custom.css"));
+
+            bundles.Add(new StyleBundle("~/Content/admin-css").Include(
+                "~/Content/admin-css/font-awesome.min.css",
+                "~/Content/admin-css/style.css",
+                "~/Content/admin-css/mob.css",
+                "~/Content/admin-css/bootstrap.css",
+                "~/Content/admin-css/materialize.css"
+                ));
         }
     }
 }

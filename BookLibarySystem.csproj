@@ -145,6 +145,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Admin\BooksController.cs" />
+    <Compile Include="Controllers\Admin\HomeController.cs" />
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -160,6 +161,7 @@
     <Compile Include="Models\CartItem.cs" />
     <Compile Include="Models\Enums\Category.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Feedback.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderInfo.cs" />
     <Compile Include="Models\Views\BooksViewModel.cs" />
@@ -168,6 +170,31 @@
     <Compile Include="Services\CartService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\admin-css\bootstrap.css" />
+    <Content Include="Content\admin-css\font-awesome.min.css" />
+    <Content Include="Content\admin-css\materialize.css" />
+    <Content Include="Content\admin-css\mob.css" />
+    <Content Include="Content\admin-css\style.css" />
+    <Content Include="Content\admin-images\listing\1.jpeg" />
+    <Content Include="Content\admin-images\listing\2.jpeg" />
+    <Content Include="Content\admin-images\listing\3.jpg" />
+    <Content Include="Content\admin-images\listing\4.jpeg" />
+    <Content Include="Content\admin-images\listing\5.jpg" />
+    <Content Include="Content\admin-images\logo1.png" />
+    <Content Include="Content\admin-images\placeholder.jpg" />
+    <Content Include="Content\admin-images\sm\1.png" />
+    <Content Include="Content\admin-images\sm\2.png" />
+    <Content Include="Content\admin-images\sm\3.png" />
+    <Content Include="Content\admin-images\sm\4.png" />
+    <Content Include="Content\admin-images\sm\5.png" />
+    <Content Include="Content\admin-images\sm\6.png" />
+    <Content Include="Content\admin-images\sm\7.png" />
+    <Content Include="Content\admin-images\user\1.png" />
+    <Content Include="Content\admin-images\user\2.png" />
+    <Content Include="Content\admin-images\user\3.png" />
+    <Content Include="Content\admin-images\user\4.png" />
+    <Content Include="Content\admin-images\user\5.png" />
+    <Content Include="Content\admin-images\user\6.png" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\custom.css" />
     <Content Include="Content\css\plugins.css" />
@@ -189,13 +216,6 @@
     <Content Include="Content\css\plugins\simple-line-icons.css" />
     <Content Include="Content\css\plugins\slick.min.css" />
     <Content Include="Content\css\style.css" />
-    <Content Include="Content\images\bg\4.jpg" />
-    <Content Include="favicon.ico" />
-    <Content Include="Global.asax" />
-    <Content Include="fonts\bicon.ttf" />
-    <Content Include="fonts\fontawesome-webfont.woff2" />
-    <Content Include="fonts\Material-Design-Iconic-Font.woff2" />
-    <Content Include="fonts\slick.woff" />
     <Content Include="Content\images\ajax-loader.gif" />
     <Content Include="Content\images\best-sell-product\1.jpg" />
     <Content Include="Content\images\best-sell-product\2.jpg" />
@@ -207,19 +227,20 @@
     <Content Include="Content\images\best-sell-product\8.jpg" />
     <Content Include="Content\images\bg\1.jpg" />
     <Content Include="Content\images\bg\2.jpg" />
+    <Content Include="Content\images\bg\4.jpg" />
     <Content Include="Content\images\bg\7.jpg" />
-    <Content Include="Content\images\books\pride_and_prejudice1.jpg" />
-    <Content Include="Content\images\books\tom_sawyer2.jpg" />
     <Content Include="Content\images\books\anna_karenina1.jpg" />
     <Content Include="Content\images\books\anna_karenina2.jpg" />
-    <Content Include="Content\images\books\pride_and_prejudice2.jpg" />
-    <Content Include="Content\images\books\huck_finn1.jpg" />
-    <Content Include="Content\images\books\huck_finn2.jpg" />
-    <Content Include="Content\images\books\war_and_peace1.jpg" />
-    <Content Include="Content\images\books\war_and_peace2.jpg" />
     <Content Include="Content\images\books\emma1.jpg" />
     <Content Include="Content\images\books\emma2.jpg" />
+    <Content Include="Content\images\books\huck_finn1.jpg" />
+    <Content Include="Content\images\books\huck_finn2.jpg" />
+    <Content Include="Content\images\books\pride_and_prejudice1.jpg" />
+    <Content Include="Content\images\books\pride_and_prejudice2.jpg" />
     <Content Include="Content\images\books\tom_sawyer1.jpg" />
+    <Content Include="Content\images\books\tom_sawyer2.jpg" />
+    <Content Include="Content\images\books\war_and_peace1.jpg" />
+    <Content Include="Content\images\books\war_and_peace2.jpg" />
     <Content Include="Content\images\icons\button-wishlist.png" />
     <Content Include="Content\images\icons\button-wishlist_white.png" />
     <Content Include="Content\images\icons\cart.png" />
@@ -240,11 +261,21 @@
     <Content Include="Content\images\product\sm-img\1.jpg" />
     <Content Include="Content\images\product\sm-img\2.jpg" />
     <Content Include="Content\images\product\sm-img\3.jpg" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\bicon.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="fonts\slick.woff" />
     <Content Include="Rotativa\help-wkhtmltoimage.txt" />
     <Content Include="Rotativa\help-wkhtmltopdf.txt" />
     <Content Include="Rotativa\wkhtmltoimage.exe" />
     <Content Include="Rotativa\wkhtmltopdf.exe" />
     <Content Include="Scripts\active.js" />
+    <Content Include="Scripts\admin\bootstrap.min.js" />
+    <Content Include="Scripts\admin\custom.js" />
+    <Content Include="Scripts\admin\jquery.min.js" />
+    <Content Include="Scripts\admin\materialize.min.js" />
     <Content Include="Scripts\plugins.js" />
     <Content Include="Scripts\popper.min.js" />
     <Content Include="Scripts\vendor\bootstrap.min.js" />
@@ -278,6 +309,10 @@
     <Content Include="Views\Book\OrderInfoReport.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Order\Index.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\Admin\Home\Index.cshtml">
+      <BrowseToURL>~/Admin/Home/Index</BrowseToURL>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
