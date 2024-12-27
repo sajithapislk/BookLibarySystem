@@ -20,5 +20,13 @@ namespace BookLibarySystem.Controllers
             }
             return View(book);
         }
+        public ActionResult Search(string query)
+        {
+            var books = string.IsNullOrEmpty(query)
+                ? db.Books.ToList()
+                : db.Books.Where(b => b.Title.Contains(query) || b.Author.FirstName.Contains(query)).ToList();
+
+            return View(books);
+        }
     }
 }

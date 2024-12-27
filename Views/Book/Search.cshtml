@@ -1,0 +1,36 @@
+﻿@model IEnumerable<BookLibarySystem.Models.Book>
+
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div class="page-shop-sidebar left--sidebar bg--white section-padding--lg">
+        <div class="container">
+            <div class="row my-5">
+                    @using (Html.BeginForm("Search", "Book", FormMethod.Post))
+                    {
+                <div class="input-group imput-group-lg">
+                        <span class="input-group-text bg-transparent border-end-0"><i class="fas fa-search"></i></span>
+                        <input type="text" name="query" class="form-control border-start-0" placeholder="Search Project...">
+                        <span class="input-group-text border-start-0 bg-transparent">
+                            <button class="btn btn-primary btn-shadow py-2 px-4">Search</button>
+                        </span>
+                    </div>
+                    }
+            </div>
+            <div class="row">
+                <div class="col-12 order-1 order-lg-2">
+                    <div class="tab__container tab-content">
+                        <div class="shop-grid tab-pane fade show active" id="nav-grid" role="tabpanel">
+                            <div class="row">
+                                @foreach (var book in Model)
+                                {
+                                    @Html.Partial("~/Views/Components/_SingleBook2.cshtml", book)
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
