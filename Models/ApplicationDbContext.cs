@@ -14,6 +14,7 @@ namespace BookLibarySystem.Models
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderInfo> OrderInfos { get; set; }
         public DbSet<Admin> Admins { get; set; }
+        public DbSet<Feedback> Feedbacks { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -37,6 +38,5 @@ namespace BookLibarySystem.Models
             return new ApplicationDbContext();
         }
 
-        public System.Data.Entity.DbSet<BookLibarySystem.Models.Feedback> Feedbacks { get; set; }
     }
 }
