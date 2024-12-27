@@ -98,8 +98,22 @@ namespace BookLibarySystem.Controllers
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Index", "Home");
+
+            // Check user role and redirect accordingly
+            if (User.IsInRole("Admin"))
+            {
+                return Redirect("Admin/");
+            }
+            else if (User.IsInRole("Customer"))
+            {
+                return Redirect("/");
+            }
+
+            // Default redirect if no specific role is found
+            return Redirect("/");
         }
+
+
 
         public ActionResult TestAuth()
         {
