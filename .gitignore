@@ -1,2 +1,11 @@
 
 Web.config
+bin/BookLibarySystem.dll
+bin/BookLibarySystem.dll.config
+bin/BookLibarySystem.pdb
+obj/Debug/BookLibarySystem.csproj.CoreCompileInputs.cache
+obj/Debug/BookLibarySystem.csproj.FileListAbsolute.txt
+obj/Debug/BookLibarySystem.csprojAssemblyReference.cache
+obj/Debug/BookLibarySystem.dll
+obj/Debug/BookLibarySystem.pdb
+Web.config
