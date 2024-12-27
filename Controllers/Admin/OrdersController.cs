@@ -105,5 +105,33 @@ namespace BookLibarySystem.Controllers.Admin
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult Report()
+        {
+            var orders = db.Orders.Include(o => o.Customer);
+            return new Rotativa.ViewAsPdf("~/Views/Admin/Orders/Report.cshtml", orders.ToList())
+            {
+                FileName = "All Orders.pdf"
+            };
+        }
+        public ActionResult TodayReport()
+        {
+            // Get today's date
+            var today = DateTime.Today;
+
+            // Fetch orders from the database
+            var orders = db.Orders.Include(o => o.Customer).ToList();
+
+            // Filter orders placed today
+            var todayOrders = orders.Where(o => o.Created_At >= today && o.Created_At < today.AddDays(1)).ToList();
+
+            // Generate PDF report
+            return new Rotativa.ViewAsPdf("~/Views/Admin/Orders/TodayReport.cshtml", todayOrders)
+            {
+                FileName = "Today_Orders.pdf"
+            };
+        }
+
+
     }
 }

@@ -338,6 +338,12 @@
     <Content Include="Views\Admin\Feedbacks\Details.cshtml" />
     <Content Include="Views\Admin\Feedbacks\Index.cshtml" />
     <Content Include="Views\Admin\Authors\Index.cshtml" />
+    <Content Include="Views\Admin\Authors\Report.cshtml">
+      <BrowseToURL>~/Admin/Authors/Report</BrowseToURL>
+    </Content>
+    <Content Include="Views\Admin\Books\Report.cshtml" />
+    <Content Include="Views\Admin\Orders\Report.cshtml" />
+    <Content Include="Views\Admin\Orders\TodayReport.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -129,5 +129,14 @@ namespace BookLibarySystem.Controllers.Admin
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult Report()
+        {
+            var books = db.Books.Include(b => b.Author);
+            return new Rotativa.ViewAsPdf("~/Views/Admin/Books/Report.cshtml", books.ToList())
+            {
+                FileName = "All Books.pdf"
+            };
+        }
     }
 }

@@ -124,5 +124,14 @@ namespace BookLibarySystem.Controllers.Admin
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult Report()
+        {
+            var authors = db.Authors;
+            return new Rotativa.ViewAsPdf("~/Views/Admin/Authors/Report.cshtml", authors.ToList())
+            {
+                FileName = "All Authors.pdf"
+            };
+        }
     }
 }
