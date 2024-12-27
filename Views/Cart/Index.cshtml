@@ -48,7 +48,7 @@
                                         <td class="product-name"><a href="#">@book.Title</a></td>
                                         <td class="product-price"><span class="amount">@String.Format("{0:C}", book.Price)</span></td>
                                         <td class="product-quantity"><input type="number" value="@item.Quantity" class="quantity" data-bookid="@book.BookId" data-price="@book.Price"></td>
-                                        <td class="product-subtotal"><span class="subtotal">@String.Format("{0:C}", book.Price*item.Quantity)</span></td>
+                                        <td class="product-subtotal"><span class="subtotal">@String.Format("{0:C}", book.Price * item.Quantity)</span></td>
                                         <td class="product-remove"><a href="#">X</a></td>
                                     </tr>
                                 }
@@ -64,7 +64,7 @@
                             {
                                 <button type="submit" class="btn btn-primary">Check Out</button>
                             }
-                            </li>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -94,28 +94,46 @@
 <!-- cart-main-area end -->
 @section scripts {
     <script>
-        $(document).ready(function () {
-            // Handle quantity change
-            $('.quantity').on('input', function () {
-                console.log("quantity");
-                var bookId = $(this).data('bookid');
-                var price = parseFloat($(this).data('price'));
-                var quantity = parseInt($(this).val());
-                var subtotal = price * quantity;
+    $(document).ready(function () {
+        function updateTotals() {
+            var total = 0;
 
-                // Update the corresponding subtotal
-                $(this).closest('tr').find('.subtotal').text('$' + subtotal.toFixed(2));
+            $('.subtotal').each(function () {
+                total += parseFloat($(this).text().replace('$', ''));
+            });
 
-                $.ajax({
-                    url: '@Url.Action("UpdateCart", "Cart")',
-                    type: 'POST',
-                    data: { bookId: bookId, quantity: quantity },
-                    success: function (data) {
-                        $subtotalElement.text('$' + data.Subtotal.toFixed(2));
-                    }
-                });
+            $('.cart__total__tk li:first-child').text('$' + total.toFixed(2));
+            $('.cart__total__tk li:last-child').text('$' + total.toFixed(2));
+            $('.cart__total__amount span:last-child').text('$' + total.toFixed(2));
+        }
 
+        // Handle quantity change
+        $('.quantity').on('input', function () {
+            var bookId = $(this).data('bookid');
+            var price = parseFloat($(this).data('price'));
+            var quantity = parseInt($(this).val());
+            var subtotal = price * quantity;
+
+            // Update the corresponding subtotal
+            $(this).closest('tr').find('.subtotal').text('$' + subtotal.toFixed(2));
+
+            // Update the overall totals
+            updateTotals();
+
+            // Optionally, update the server-side cart
+            $.ajax({
+                url: '@Url.Action("UpdateCart", "Cart")',
+                type: 'POST',
+                data: { bookId: bookId, quantity: quantity },
+                success: function (data) {
+                    updateTotals(); // Ensure totals are updated after server-side update
+                }
             });
         });
+
+        // Initial totals calculation
+        updateTotals();
+    });
     </script>
-    }
+
+}

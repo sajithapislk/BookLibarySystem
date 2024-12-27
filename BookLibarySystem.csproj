@@ -170,6 +170,7 @@
     <Compile Include="Models\OrderInfo.cs" />
     <Compile Include="Models\Views\BooksViewModel.cs" />
     <Compile Include="Models\Views\LoginViewModel.cs" />
+    <Compile Include="Models\Views\RegisterViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CartService.cs" />
   </ItemGroup>
