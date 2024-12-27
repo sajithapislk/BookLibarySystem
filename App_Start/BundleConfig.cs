@@ -21,6 +21,8 @@ namespace BookLibarySystem
              ));
 
             bundles.Add(new ScriptBundle("~/bundles/admin-js").Include(
+                "~/Scripts/admin/jquery.min.js",
+                "~/Scripts/admin/bootstrap.min.js",
                 "~/Scripts/admin/materialize.min.js",
                 "~/Scripts/admin/custom.js"
             ));

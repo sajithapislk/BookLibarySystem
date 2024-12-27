@@ -40,7 +40,7 @@ namespace BookLibarySystem.Controllers.Admin
         // GET: Books/Create
         public ActionResult Create()
         {
-            ViewBag.AuthorId = new SelectList(db.Authors, "AuthorId", "FirstName");
+            ViewBag.Authors = db.Authors.ToList();
             return View("~/Views/Admin/Books/Create.cshtml");
         }
 
