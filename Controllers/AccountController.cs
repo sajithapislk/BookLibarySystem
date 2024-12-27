@@ -28,19 +28,49 @@ namespace BookLibarySystem.Controllers
                 return View(model);
             }
 
-            var customer = db.Customers.SingleOrDefault(c => c.Email == model.Email);
-            if (customer != null)
+            var user = db.Customers.SingleOrDefault(c => c.Email == model.Email);
+            if (user == null)
+            {
+                // Check if it's an admin
+                var admin = db.Admins.SingleOrDefault(a => a.Email == model.Email);
+                if (admin != null)
+                {
+                    var passwordHasher = new PasswordHasher();
+                    var result = passwordHasher.VerifyHashedPassword(admin.Password, model.Password);
+                    if (result == PasswordVerificationResult.Success)
+                    {
+                        FormsAuthentication.SetAuthCookie(model.Email, false);
+                        Session["UserId"] = admin.AdminId;
+                        Session["UserRole"] = "Admin";
+                        if (!Roles.RoleExists("Admin"))
+                        {
+                            Roles.CreateRole("Admin");
+                        }
+                        if (!Roles.IsUserInRole(model.Email, "Admin"))
+                        {
+                            Roles.AddUserToRole(model.Email, "Admin");
+                        }
+                        return RedirectToLocal(returnUrl);
+                    }
+                }
+            }
+            else
             {
                 var passwordHasher = new PasswordHasher();
-                var result = passwordHasher.VerifyHashedPassword(customer.Password, model.Password);
+                var result = passwordHasher.VerifyHashedPassword(user.Password, model.Password);
                 if (result == PasswordVerificationResult.Success)
                 {
-                    // Set authentication cookie
                     FormsAuthentication.SetAuthCookie(model.Email, false);
-
-                    // Store user ID in session
-                    Session["UserId"] = customer.CustomerId;
-
+                    Session["UserId"] = user.CustomerId;
+                    Session["UserRole"] = "Customer";
+                    if (!Roles.RoleExists("Customer"))
+                    {
+                        Roles.CreateRole("Customer");
+                    }
+                    if (!Roles.IsUserInRole(model.Email, "Customer"))
+                    {
+                        Roles.AddUserToRole(model.Email, "Customer");
+                    }
                     return RedirectToLocal(returnUrl);
                 }
             }
@@ -48,6 +78,9 @@ namespace BookLibarySystem.Controllers
             ModelState.AddModelError("", "Invalid login attempt.");
             return View(model);
         }
+
+
+
 
 
         // POST: Account/LogOff

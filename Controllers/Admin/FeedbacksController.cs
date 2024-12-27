@@ -10,6 +10,7 @@ using BookLibarySystem.Models;
 
 namespace BookLibarySystem.Controllers.Admin
 {
+    [Authorize(Roles = "Admin")]
     public class FeedbacksController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

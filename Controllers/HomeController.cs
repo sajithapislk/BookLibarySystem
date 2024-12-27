@@ -15,6 +15,7 @@ namespace BookLibarySystem.Controllers
         [AllowAnonymous]
         public ActionResult Index()
         {
+            System.Diagnostics.Debug.WriteLine("Authorize check for user: " + User.Identity.Name + " in role: " + User.IsInRole("Admin"));
             var allBooks = db.Books;
             var newBooks = allBooks.Where(b => DbFunctions.DiffDays(b.CreatedAt, DateTime.Now) <= 30).Take(4);
             var viewModel = new BooksViewModel { AllBooks = allBooks, NewBooks = newBooks };

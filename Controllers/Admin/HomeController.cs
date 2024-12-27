@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace BookLibarySystem.Controllers.Admin
 {
+    [Authorize(Roles = "Admin")]
     public class HomeController : Controller
     {
         // GET: Home
