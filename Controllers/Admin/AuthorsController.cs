@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -47,10 +48,27 @@ namespace BookLibarySystem.Controllers.Admin
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "AuthorId,FirstName,LastName,Image")] Author author)
+        public ActionResult Create([Bind(Include = "AuthorId,FirstName,LastName,ImageFile")] Author author, HttpPostedFileBase ImageFile)
         {
             if (ModelState.IsValid)
             {
+                if (ImageFile != null && ImageFile.ContentLength > 0)
+                {
+                    // Generate a short, unique file name using timestamp
+                    var fileName = DateTime.Now.ToString("yyyyMMddHHmmss") + Path.GetExtension(ImageFile.FileName);
+                    var directoryPath = Server.MapPath("~/Content/images/authors/");
+                    var filePath = Path.Combine(directoryPath, fileName);
+
+                    // Ensure the directory exists
+                    if (!Directory.Exists(directoryPath))
+                    {
+                        Directory.CreateDirectory(directoryPath);
+                    }
+
+                    ImageFile.SaveAs(filePath);
+                    author.Image = fileName; // Store only the file name
+                }
+
                 db.Authors.Add(author);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -58,6 +76,7 @@ namespace BookLibarySystem.Controllers.Admin
 
             return View("~/Views/Admin/Authors/Create.cshtml", author);
         }
+
 
         // GET: Authors/Edit/5
         public ActionResult Edit(int? id)

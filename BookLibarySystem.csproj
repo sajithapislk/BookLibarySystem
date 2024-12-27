@@ -245,6 +245,7 @@
     <Content Include="Content\images\books\tom_sawyer2.jpg" />
     <Content Include="Content\images\books\war_and_peace1.jpg" />
     <Content Include="Content\images\books\war_and_peace2.jpg" />
+    <Content Include="Content\images\abc.png" />
     <Content Include="Content\images\icons\button-wishlist.png" />
     <Content Include="Content\images\icons\button-wishlist_white.png" />
     <Content Include="Content\images\icons\cart.png" />
@@ -337,7 +338,9 @@
     <Content Include="Views\Admin\Orders\Index.cshtml" />
     <Content Include="Views\Admin\Feedbacks\Details.cshtml" />
     <Content Include="Views\Admin\Feedbacks\Index.cshtml" />
-    <Content Include="Views\Admin\Authors\Index.cshtml" />
+    <Content Include="Views\Admin\Authors\Index.cshtml">
+      <BrowseToURL>~/Admin/Authors/Index</BrowseToURL>
+    </Content>
     <Content Include="Views\Admin\Authors\Report.cshtml">
       <BrowseToURL>~/Admin/Authors/Report</BrowseToURL>
     </Content>
