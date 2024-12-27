@@ -114,6 +114,22 @@ namespace BookLibarySystem.Controllers
             }
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Register(Customer customer)
+        {
+            if (ModelState.IsValid)
+            {
+                var passwordHasher = new PasswordHasher();
+                customer.Password = passwordHasher.HashPassword(customer.Password);
 
+                db.Customers.Add(customer);
+                db.SaveChanges();
+
+                return View("Login");
+            }
+
+            return View("Login");
+        }
     }
 }

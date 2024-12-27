@@ -65,24 +65,28 @@
                     @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
                     {
                         @Html.AntiForgeryToken()
-                        <div class="account__form">
-                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                            <div class="input__box">
-                                @Html.Label("Name", new { @class = "control-label col-md-2" })
-                                <input type="text" name="Name" class="form-control" />
-                            </div>
-                            <div class="input__box">
-                                @Html.Label("Email address", new { @class = "control-label col-md-2" })
-                                <input type="email" name="Email" class="form-control" />
-                            </div>
-                            <div class="input__box">
-                                @Html.Label("Password", new { @class = "control-label col-md-2" })
-                                <input type="password" name="Password" class="form-control" />
-                            </div>
-                            <div class="form__btn">
-                                <button type="submit">Register</button>
-                            </div>
-                        </div>
+                <div class="account__form">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="input__box">
+                        @Html.Label("FirstName", new { @class = "control-label col-md-2" })
+                        <input type="text" name="FirstName" class="form-control" />
+                    </div>
+                    <div class="input__box">
+                        @Html.Label("LastName", new { @class = "control-label col-md-2" })
+                        <input type="text" name="LastName" class="form-control" />
+                    </div>
+                    <div class="input__box">
+                        @Html.Label("Email address", new { @class = "control-label col-md-2" })
+                        <input type="email" name="Email" class="form-control" />
+                    </div>
+                    <div class="input__box">
+                        @Html.Label("Password", new { @class = "control-label col-md-2" })
+                        <input type="password" name="Password" class="form-control" />
+                    </div>
+                    <div class="form__btn">
+                        <button type="submit">Register</button>
+                    </div>
+                </div>
                     }
                 </div>
             </div>
