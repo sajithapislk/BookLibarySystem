@@ -60,7 +60,8 @@
                                     <div class="addtocart__actions">
                                         @using (Html.BeginForm("AddToCart", "Cart", FormMethod.Post))
                                         {
-                                            @*@Html.Hidden("id", Model.Book.BookId)*@
+                                           int bookId = Model.Book.BookId;
+                                           @Html.Hidden("id", bookId)
 
                                             <button class="tocart" type="submit" title="Add to Cart">
                                                 Add to
