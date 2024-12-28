@@ -1,4 +1,5 @@
 ﻿using BookLibarySystem.Models;
+using BookLibarySystem.Models.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,16 +11,36 @@ namespace BookLibarySystem.Controllers
     public class BookController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-        // GET: Book
+
         public ActionResult Show(int id)
         {
             var book = db.Books.Find(id);
+
             if (book == null)
             {
                 return HttpNotFound();
             }
-            return View(book);
+
+            // Explicitly load OrderInfos and Feedbacks
+            db.Entry(book).Collection(b => b.OrderInfos).Load();
+            foreach (var orderInfo in book.OrderInfos)
+            {
+                db.Entry(orderInfo).Collection(oi => oi.Feedbacks).Load();
+            }
+
+            var feedbacks = book.OrderInfos.SelectMany(oi => oi.Feedbacks).ToList();
+
+            var viewModel = new BookDetailsViewModel
+            {
+                Book = book,
+                Feedbacks = feedbacks
+            };
+
+            return View(viewModel);
         }
+
+
+
         public ActionResult Search(string query)
         {
             var books = string.IsNullOrEmpty(query)

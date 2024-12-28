@@ -13,6 +13,15 @@ namespace BookLibarySystem
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+           
+            // Default route with namespaces
+            routes.MapRoute(
+                name: "Default",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+                namespaces: new[] { "BookLibarySystem.Controllers" }
+            );
+
             // Add a route for the Admin area with namespaces
             routes.MapRoute(
                 name: "Admin",
@@ -21,13 +30,6 @@ namespace BookLibarySystem
                 namespaces: new[] { "BookLibarySystem.Controllers.Admin" }
             );
 
-            // Default route with namespaces
-            routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
-                namespaces: new[] { "BookLibarySystem.Controllers" }
-            );
         }
     }
 
