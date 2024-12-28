@@ -154,6 +154,7 @@
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\OrderInfoesController.cs" />
     <Compile Include="Data\DatabaseSeeder.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -353,6 +354,7 @@
     <Content Include="Views\Admin\Orders\TodayReport.cshtml" />
     <Content Include="Views\Book\Search.cshtml" />
     <Content Include="Views\Components\_SingleBook2.cshtml" />
+    <Content Include="Views\OrderInfoes\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
