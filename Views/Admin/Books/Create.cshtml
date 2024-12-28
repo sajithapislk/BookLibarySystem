@@ -13,7 +13,7 @@
                 <p>Provide the details for the new book</p>
             </div>
             <div class="tab-inn">
-                @using (Html.BeginForm())
+                @using (Html.BeginForm("Create", "Books", FormMethod.Post, new { enctype = "multipart/form-data" }))
                 {
                     @Html.AntiForgeryToken()
                     <div class="row">
@@ -37,14 +37,14 @@
                         </div>
                         <div class="input-field col s6">
                             @Html.LabelFor(model => model.Image1)
-                            @Html.EditorFor(model => model.Image1, new { htmlAttributes = new { @class = "validate" } })
+                            <input type="file" name="Image1" class="form-control" />
                             @Html.ValidationMessageFor(model => model.Image1, "", new { @class = "text-danger" })
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s6">
                             @Html.LabelFor(model => model.Image2)
-                            @Html.EditorFor(model => model.Image2, new { htmlAttributes = new { @class = "validate" } })
+                            <input type="file" name="Image2" class="form-control" />
                             @Html.ValidationMessageFor(model => model.Image2, "", new { @class = "text-danger" })
                         </div>
                         <div class="input-field col s6">

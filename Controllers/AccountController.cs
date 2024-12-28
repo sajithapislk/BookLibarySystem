@@ -89,7 +89,7 @@ namespace BookLibarySystem.Controllers
         public ActionResult LogOff()
         {
             FormsAuthentication.SignOut();
-            return RedirectToAction("Index", "Home");
+            return Redirect("/");
         }
 
         private ActionResult RedirectToLocal(string returnUrl)

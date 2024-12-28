@@ -175,3 +175,4 @@ C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\obj\
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\obj\Debug\BookLibarySystem.csproj.CopyComplete
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\obj\Debug\BookLibarySystem.dll
 C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\obj\Debug\BookLibarySystem.pdb
+C:\Users\Sajith Madhubashana\source\repos\BookLibarySystem\BookLibarySystem\obj\Debug\BookLibarySystem.csprojAssemblyReference.cache

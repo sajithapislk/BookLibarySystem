@@ -333,7 +333,9 @@
     <Content Include="Views\Admin\Books\Delete.cshtml" />
     <Content Include="Views\Admin\Books\Details.cshtml" />
     <Content Include="Views\Admin\Books\Edit.cshtml" />
-    <Content Include="Views\Admin\Books\Index.cshtml" />
+    <Content Include="Views\Admin\Books\Index.cshtml">
+      <BrowseToURL>~/Admin/Books/Index</BrowseToURL>
+    </Content>
     <Content Include="Views\Admin\Customers\Create.cshtml" />
     <Content Include="Views\Admin\Customers\Delete.cshtml" />
     <Content Include="Views\Admin\Customers\Details.cshtml" />
