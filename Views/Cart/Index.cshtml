@@ -63,10 +63,9 @@
                     <ul class="cart__btn__list d-flex flex-wrap flex-md-nowrap flex-lg-nowrap flex-row-reverse">
 
                         <li>
-                            @using (Html.BeginForm("Checkout", "Cart", FormMethod.Post))
-                            {
-                                <button type="submit" class="btn btn-primary">Check Out</button>
-                            }
+                            @Html.ActionLink("Checkout", "Checkout", "Cart", new { @class = "btn btn-primary" })
+
+
                         </li>
                     </ul>
                 </div>

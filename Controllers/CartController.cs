@@ -90,5 +90,18 @@ namespace BookLibarySystem.Controllers
             cartService.ClearCart(); // Clear cart after checkout
             return View("CheckoutConfirmation");
         }
+
+        public ActionResult Checkout()
+        {
+            var cartItems = cartService.GetCartItems();
+
+            // Calculate the total price
+            decimal total = cartItems.Sum(item => item.Book.Price * item.Quantity);
+
+            ViewBag.Total = total;
+            return View(cartItems);
+        }
+
+
     }
 }

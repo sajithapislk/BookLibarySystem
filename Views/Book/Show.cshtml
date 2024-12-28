@@ -1,4 +1,4 @@
-﻿@Model BookLibarySystem.Models.Views.BookDetailsViewModel
+﻿@model BookLibarySystem.Models.Views.BookDetailsViewModel
 
 <!-- Start breadcrumb area -->
 <div class="ht__breadcrumb__area bg-image--4" style="background-image: url('@Url.Content("~/Content/images/bg/4.jpg")');">
@@ -60,8 +60,8 @@
                                     <div class="addtocart__actions">
                                         @using (Html.BeginForm("AddToCart", "Cart", FormMethod.Post))
                                         {
-                                           int bookId = Model.Book.BookId;
-                                           @Html.Hidden("id", bookId)
+                                            int bookId = Model.Book.BookId;
+                                            @Html.Hidden("id", bookId)
 
                                             <button class="tocart" type="submit" title="Add to Cart">
                                                 Add to
