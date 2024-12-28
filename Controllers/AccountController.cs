@@ -102,7 +102,7 @@ namespace BookLibarySystem.Controllers
             // Check user role and redirect accordingly
             if (User.IsInRole("Admin"))
             {
-                return Redirect("/Admin/Home/Index");
+                return Redirect("/Admin/");
             }
             else if (User.IsInRole("Customer"))
             {
