@@ -84,7 +84,7 @@ namespace BookLibarySystem.Data
 
             var book3 = new Book
             {
-                Title = "War and Peace",
+                Title = "Scinece",
                 Author = author3,
                 ISBN = "978-0307388875",
                 Price = 12.99m,
