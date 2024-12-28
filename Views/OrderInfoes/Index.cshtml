@@ -8,30 +8,48 @@
 <h2>Index</h2>
 
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Book.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Book.Price)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Qty)
-        </th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Book.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Book.Price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Qty)
-        </td>
-    </tr>
-}
-
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Book.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Book.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Qty)
+            </th>
+            <th>
+                Feedback
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Book.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Book.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Qty)
+                </td>
+                <td>
+                    @using (Html.BeginForm("Create", "Feedbacks", FormMethod.Post))
+                    {
+                        @Html.Hidden("id", item.Id)
+                        <div class="form-group">
+                            @Html.TextArea("FeedbackText", null, new { @class = "form-control", placeholder = "Write your feedback here..." })
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Submit Feedback</button>
+                        </div>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>

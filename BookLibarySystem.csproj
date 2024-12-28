@@ -152,6 +152,7 @@
     <Compile Include="Controllers\Admin\OrdersController.cs" />
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\FeedbacksController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\OrderInfoesController.cs" />
@@ -169,6 +170,7 @@
     <Compile Include="Models\Feedback.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderInfo.cs" />
+    <Compile Include="Models\Views\BookDetailsViewModel.cs" />
     <Compile Include="Models\Views\BooksViewModel.cs" />
     <Compile Include="Models\Views\LoginViewModel.cs" />
     <Compile Include="Models\Views\RegisterViewModel.cs" />
