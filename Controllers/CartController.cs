@@ -41,7 +41,12 @@ namespace BookLibarySystem.Controllers
             cartService.UpdateCart(bookId, quantity);
             return Json(new{status = "success"});
         }
-
+        [HttpPost]
+        public ActionResult RemoveCart(int bookId)
+        {
+            cartService.RemoveCart(bookId);
+            return RedirectToAction("Index");
+        }
         [HttpPost]
         public ActionResult Checkout(string address)
         {

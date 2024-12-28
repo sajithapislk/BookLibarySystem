@@ -29,6 +29,7 @@
                                     <th>Id</th>
                                     <th>Address</th>
                                     <th>Status</th>
+                                    <th>View</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -39,6 +40,7 @@
                                         <td ><a href="#">@item.OrderId</a></td>
                                         <td><span class="amount">@item.Address</span></td>
                                         <td >@item.Status</td>
+                                        <td> @Html.ActionLink("View", "Index","OrderInfoes",new { orderId=item.OrderId }, null)</td>
                                     </tr>
                                 }
                             </tbody>
