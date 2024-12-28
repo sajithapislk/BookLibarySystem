@@ -47,6 +47,16 @@ namespace BookLibarySystem.Services
             }
             HttpContext.Current.Session[CartSessionKey] = cart;
         }
+        public void RemoveCart(int bookId)
+        {
+            var cart = GetCartItems();
+            var cartItem = cart.FirstOrDefault(c => c.BookId == bookId);
+            if (cartItem != null)
+            {
+                cart.Remove(cartItem);
+            }
+            HttpContext.Current.Session[CartSessionKey] = cart;
+        }
 
         public void ClearCart()
         {

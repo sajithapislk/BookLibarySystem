@@ -24,6 +24,7 @@
             <div class="col-md-12 col-sm-12 ol-lg-12">
                 <form action="#">
                     <div class="table-content wnro__table table-responsive">
+
                         <table>
                             <thead>
                                 <tr class="title-top">
@@ -49,7 +50,9 @@
                                         <td class="product-price"><span class="amount">@String.Format("{0:C}", book.Price)</span></td>
                                         <td class="product-quantity"><input type="number" value="@item.Quantity" class="quantity" data-bookid="@book.BookId" data-price="@book.Price"></td>
                                         <td class="product-subtotal"><span class="subtotal">@String.Format("{0:C}", book.Price * item.Quantity)</span></td>
-                                        <td class="product-remove"><a href="#">X</a></td>
+                                        <td class="product-remove">
+                                            <button type="button" class="btn btn-primary" onclick="removeCartItem(@book.BookId)">X</button>
+                                        </td>
                                     </tr>
                                 }
                             </tbody>
@@ -91,10 +94,20 @@
         </div>
     </div>
 </div>
+
+<form id="removeCartForm" method="post" action="@Url.Action("RemoveCart", "Cart")">
+    <input type="hidden" id="bookIdInput" name="bookId" value="">
+</form>
 <!-- cart-main-area end -->
 @section scripts {
     <script>
-    $(document).ready(function () {
+        function removeCartItem(bookId) {
+            document.getElementById('bookIdInput').value = bookId;
+            document.getElementById('removeCartForm').submit();
+        }
+        $(document).ready(function () {
+
+
         function updateTotals() {
             var total = 0;
 
