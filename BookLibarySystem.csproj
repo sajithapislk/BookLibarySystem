@@ -170,6 +170,7 @@
     <Compile Include="Models\Feedback.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderInfo.cs" />
+    <Compile Include="Models\Views\AdminDashboardViewModel.cs" />
     <Compile Include="Models\Views\BookDetailsViewModel.cs" />
     <Compile Include="Models\Views\BooksViewModel.cs" />
     <Compile Include="Models\Views\LoginViewModel.cs" />
